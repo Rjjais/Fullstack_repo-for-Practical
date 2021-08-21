@@ -1,9 +1,9 @@
-h1
-{
+h1{
     text-align: center;
-    color: red;
     background-color: wheat;
+    color: tomato;
 }
 p{
     font-size: 20px;
+    background-color: turquoise;
 }
