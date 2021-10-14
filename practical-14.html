@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+      <meta charset="utf-8">
+      <title></title>
+      <style>
+            * {
+                  background: grey;
+            }
+            .container {
+                  text-align: center;
+            }
+            button {
+                  border: none;
+            }
+      </style>
+</head>
+<body>
+      <h1 style="text-align: center; color: white;">COUNTER</h1>
+      <div class="container">
+            <button style="display: inline-block; padding: 10px; background: #FFEA00; margin-right: 20px;" class="counter-minus">-</button>
+            <h1 style="display: inline-block; padding: 10px; color: yellow" class="counter-display">COUNTER</h1>
+            <button style="display: inline-block; padding: 10px; background: #FFEA00; margin-left: 20px" class="counter-plus">+</button>
+      </div>
+</body>
+<script>
+      let counterDisplayElem = document.querySelector('.counter-display');
+      let counterMinusElem = document.querySelector('.counter-minus');
+      let counterPlusElem = document.querySelector('.counter-plus');
+
+      let count = 0;
+
+      updateDisplay();
+
+      counterPlusElem.addEventListener("click",()=>{
+            count++;
+            updateDisplay();
+      }) ;
+
+      counterMinusElem.addEventListener("click",()=>{
+            count--;
+            updateDisplay();
+      });
+
+      function updateDisplay(){
+            count = count<=0 ? 0 : count;
+            counterDisplayElem.innerHTML = count;
+      };
+</script>
+</html>
