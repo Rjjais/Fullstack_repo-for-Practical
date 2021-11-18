@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>LAB PRACTICAL</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .menu {
+        list-style: none;
+        float: right;
+      }
+      .menu li {
+        line-height: 70px;
+        display: inline-block;
+      }
+      .menu li a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0px 20px;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      .menu li a:hover {
+        color: black;
+        background-color: white;
+      }
+
+      .show-btn,
+      .hide-btn,
+      #chk {
+        font-size: 15px;
+        line-height: 70px;
+        color: white;
+
+        display: none;
+      }
+
+
+      #header {
+        width: 1400px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        height: 70px;
+        padding: 0px 20px;
+        display: flex;
+        align-items: left;
+        justify-content: space-around;
+      }
+
+
+      #navBar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      #navBar > a {
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 10px 40px;
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #navBar > a:hover {
+        background-color: white;
+        color: grey;
+      }
+
+
+      #banner {
+        margin-top: 70px;
+        height: 550px;
+        margin-bottom: 15px;
+        display: flex;
+        font-size: 10px;
+        color: grey;
+      }
+
+      #banner {
+        background-image: url(./assets/images/pexels-rachel-claire-4846097.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      #banner pre {
+        margin: 20px 20px;
+        padding: 70px;
+        color: black;
+        font-size: 15px;
+      }
+      
+
+    </style>
+  </head>
+
+  <body>
+      <div id="header">
+        <input type="checkbox" id="chk" />
+        <label for="chk" class="show-btn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <ul class="menu">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">SHOP</a></li>
+          <li><a href="#circle-container">ABOUT US</a></li>
+          <li><a href="#Technologies">CONTACT</a></li>
+
+          <label for="chk" class="hide-btn">
+            <i class="fa fa-times"></i>
+          </label>
+        </ul>
+      </div>
+
+      <div id="banner">
+        <pre>QUALITY IS EVERYONE'S RESPONSIBILITY
+        <p style="font-size: 40px;">A Home Is Not A 
+Home Without 
+<u>Furniture</u></p></pre>
+      </div>
+      
+  </body>
+  </html>
