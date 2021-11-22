@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <style>
+        body{
+    background-color: #483D8B;
+}
+
+.form-container{
+    margin-top: 120px;
+    background-color: white;
+    display: flex;
+    align-items:flex-start;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    flex-direction: column;
+    min-height: 350px;
+    width: 18%;
+}
+
+.form-comp{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-comp,.submit{
+    display: flex;
+    
+    flex-direction: column;
+    text-align: start;
+    margin: 15px;
+    width: 100%;
+   
+}
+.parent{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    min-height: 100%;
+    flex-direction: column;
+   
+    margin: auto;
+}
+
+.submit{
+    background-color: #483D8B;
+    color: white;
+    width: 100%;
+  
+    align-items: center;
+   
+}
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="form-container">
+        <form method="GET"
+        action=""
+
+        onsubmit="return validateForm()">
+            <h1>Create Account</h1>
+            <div class="form-comp">
+                <label for="username">Username</label>
+                <input type="text" id="username" pattern="^[a-z]+$" placeholder="Enter username">
+            </div>
+            <div class="form-comp">
+                <label for="email">Email</label>
+                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "Invalid Email Address" placeholder="Enter email">
+            </div>
+
+            <div class="form-comp">
+                <label for="password">Password</label>
+                <input type="password" id="password"  placeholder="Enter password">
+
+            </div>
+
+            <div class="form-comp">
+                <label for="confirm-pass">Password Again</label>
+                <input type="password" id="confirm-pass" placeholder="Enter password again">
+            </div>
+            <button type="submit" class="submit">
+                Submit
+            </button>
+
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function validateForm(){
+        var u = document.getElementById("username").value
+        var pass = document.getElementById("password").value;
+        var cpass = document.getElementById("confirm-pass");
+        console.log(u);
+        if(u == ""){
+            alert("Enter your username");
+            return false;
+        }
+
+    }
+
+
+</script>
+
+</html>
